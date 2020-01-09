@@ -32,6 +32,10 @@
   float: left;
   cursor: pointer;
 
+  a {
+    text-decoration: none;
+  }
+
   .delete-button {
     float: right;
     display: inline-block;

@@ -2,11 +2,12 @@
   <h2>Todo Details</h2>
 
   <div class="sticker">
-    <label class="check-container">
+    <label class="check-container" fxFlex="10">
       <input type="checkbox" [(ngModel)]="todoDetails.done">
       <span class="check-task"></span>
     </label>
-    <input type="text" [(ngModel)]="todoDetails.label">
+    <input type="text" fxFlex [(ngModel)]="todoDetails.label" placeholder="Label..">
+<!--    <input type="text" [(ngModel)]="todoDetails.label">-->
   </div>
 
   <div class="actions">
