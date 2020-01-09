@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.siplec</groupId>
-	<artifactId>todolist</artifactId>
+	<artifactId>todolist-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>todo-list</name>
 	<description>Todo list API project</description>
