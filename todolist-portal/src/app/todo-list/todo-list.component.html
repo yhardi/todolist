@@ -12,9 +12,13 @@
   <ul class="todo-list">
     <li *ngFor="let todo of todoList">
       <div class="sticker">
-        <span class="delete-button" (click)="delete(todo)">x</span>
-        <input type="checkbox" [checked]="todo.done" class="check-task">
+        <label class="check-container">
+          <input type="checkbox" [checked]="todo.done">
+          <span class="check-task"></span>
+        </label>
         <a routerLink="/detail/{{todo.id}}">{{todo.label}}</a>
+        <span class="delete-button" (click)="delete(todo)">x</span>
+
       </div>
     </li>
   </ul>
