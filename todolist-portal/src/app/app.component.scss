@@ -3,3 +3,109 @@ h1 {
   color: #777;
   font-size: 3em;
 }
+
+input[type=text] {
+  padding: 5px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 4px 2px;
+}
+
+.action-button {
+  background-color: #e6b929;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.sticker {
+  width: 700px;
+  background: white;
+  font-size: 1.6em;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 5px auto;
+  text-align: center;
+  font-weight: 200;
+
+  border: 1px solid #ffd185;
+  border-radius: 5px;
+
+  float: left;
+  cursor: pointer;
+
+  .delete-button {
+    float: right;
+    display: inline-block;
+    padding: 2px 5px;
+    color: indianred;
+  }
+
+  .check-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .check-task {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    :hover input ~ .check-task {
+      background-color: #ccc;
+    }
+
+    input:checked ~ .check-task {
+      background-color: #e6b929;
+    }
+
+    input:checked ~ .check-task:after {
+      display: block;
+    }
+
+  }
+}
+

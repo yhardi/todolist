@@ -6,98 +6,12 @@
   text-align: center;
 
   li {
-    margin: 0 10px;
+/*    margin: 0 10px;*/
     padding: 5px 0;
 
     :hover {
       background: #ffffea;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
-    }
-  }
-}
-
-.sticker {
-  width: 700px;
-  background: white;
-  font-size: 1.6em;
-  font-family: sans-serif;
-  padding: 20px;
-  margin: 0 auto;
-  text-align: center;
-  font-weight: 200;
-
-  border: 2px solid #ffd185;
-  border-radius: 5px;
-
-  float: left;
-  cursor: pointer;
-
-  a {
-    text-decoration: none;
-  }
-
-  .delete-button {
-    float: right;
-    display: inline-block;
-    padding: 2px 5px;
-    color: indianred;
-  }
-
-  /*Checkbox style*/
-  .check-container {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
-
-    .check-task {
-      height: 25px;
-      width: 25px;
-      background-color: #eee;
-
-      float: left;
-
-      :after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-
-      :after {
-        left: 9px;
-        top: 5px;
-        width: 5px;
-        height: 10px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-    }
-
-    :hover input ~ .check-task {
-      background-color: #ccc;
-    }
-
-    input:checked ~ .check-task {
-      background-color: #70d0b3;
-    }
-
-    input:checked ~ .check-task:after {
-      display: block;
     }
   }
 }

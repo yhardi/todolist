@@ -2,11 +2,9 @@
   <h2>Todo List</h2>
 
   <!--create todo -->
-  <div>
-    <label>Todo label:
-      <input type="text" [(ngModel)]="todo.label" (keyup.enter)="createTodo()" placeholder="Insert a todo label">
-    </label>
-    <button (click)="createTodo();">Add</button>
+  <div fxLayout="row">
+    <input fxFlex="90" type="text" [(ngModel)]="todo.label" (keyup.enter)="createTodo()" placeholder="Insert a todo label">
+    <button fxFlex (click)="createTodo();" class="action-button">Add</button>
   </div>
 
   <ul class="todo-list">
