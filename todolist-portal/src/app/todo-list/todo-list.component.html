@@ -1,0 +1,21 @@
+<div>
+  <h2>Todo List</h2>
+
+  <!--create todo -->
+  <div>
+    <label>Todo label:
+      <input type="text" [(ngModel)]="todo.label" (keyup.enter)="createTodo()" placeholder="Insert a todo label">
+    </label>
+    <button (click)="createTodo();">Add</button>
+  </div>
+
+  <ul class="todo-list">
+    <li *ngFor="let todo of todoList">
+      <div class="sticker">
+        <span class="delete-button" (click)="delete(todo)">x</span>
+        <input type="checkbox" [checked]="todo.done" class="check-task">
+        <a routerLink="/detail/{{todo.id}}">{{todo.label}}</a>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,47 @@
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+
+  li {
+    margin: 0 10px;
+    padding: 5px 0;
+
+    :hover {
+      background: #ffffea;
+      box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    }
+  }
+}
+
+.sticker {
+  width: 700px;
+  background: white;
+  font-size: 1.6em;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 200;
+
+  border: 2px solid #ffd185;
+  border-radius: 5px;
+
+  float: left;
+
+  .delete-button {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    color:indianred;
+  }
+
+  .check-task {
+    float:left;
+    display:inline-block;
+    padding:2px 5px;
+    color:#caffb0;
+  }
+}
