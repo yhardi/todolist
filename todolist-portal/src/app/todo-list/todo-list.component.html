@@ -13,7 +13,7 @@
     <li *ngFor="let todo of todoList">
       <div class="sticker">
         <label class="check-container">
-          <input type="checkbox" [checked]="todo.done">
+          <input type="checkbox" [(ngModel)]="todo.done" (change)="markAsDone(todo)">
           <span class="check-task"></span>
         </label>
         <a routerLink="/detail/{{todo.id}}">{{todo.label}}</a>

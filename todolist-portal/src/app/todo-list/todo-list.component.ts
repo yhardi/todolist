@@ -38,4 +38,10 @@ export class TodoListComponent implements OnInit {
       }
     });
   }
+
+  markAsDone(todo: Todo) {
+    this.todoService.update(todo).subscribe(() => {
+      console.log('Marked as done');
+    });
+  }
 }
