@@ -23,7 +23,7 @@ export class TodoListComponent implements OnInit {
 
   createTodo() {
     this.todoService.create(this.todo).subscribe(todo => {
-      this.todoList.push(this.todo);
+      this.todoList.push(todo);
       this.todo = new Todo();
     });
   }
