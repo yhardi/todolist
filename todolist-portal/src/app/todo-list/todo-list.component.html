@@ -3,8 +3,13 @@
 
   <!--create todo -->
   <div fxLayout="row">
-    <input fxFlex="90" type="text" [(ngModel)]="todo.label" (keyup.enter)="createTodo()" placeholder="Insert a todo label">
-    <button fxFlex (click)="createTodo();" class="action-button">Add</button>
+    <input fxFlex="90" type="text" [(ngModel)]="todo.label" (keyup.enter)="createTodo()"
+           placeholder="Insert a todo label" required maxlength="80" #label="ngModel">
+    <div
+      *ngIf="label.invalid && (label.dirty || label.touched)" class="errors">
+      <div *ngIf="label.errors.required">Required.</div>
+    </div>
+    <button fxFlex (click)="createTodo();" class="action-button" [disabled]="!label.valid">Add</button>
   </div>
 
   <ul class="todo-list">
