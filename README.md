@@ -2,7 +2,7 @@
 
 ## Todo list test
 
-###To deploy app :
+### To deploy app :
 
 Execute the command bellow in the project parent folder :
  
