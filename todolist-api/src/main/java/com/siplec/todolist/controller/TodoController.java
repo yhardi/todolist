@@ -43,7 +43,7 @@ public class TodoController {
 	public List<Todo> getAllTodos() {
 		return todoService.findAll();
 	}
-	
+
 	@GetMapping("/pagination")
 	@ResponseBody
 	public Page<Todo> getAllTodos(@RequestParam(value = "page", defaultValue = "1", required = false) int page,

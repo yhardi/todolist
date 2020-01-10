@@ -7,12 +7,14 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { SortByCreatedDatePipe } from './sort-by-created-date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    SortByCreatedDatePipe
   ],
   imports: [
     BrowserModule,

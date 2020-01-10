@@ -1,5 +1,6 @@
 package com.siplec.todolist.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -40,6 +41,7 @@ public class TodoService {
 	}
 
 	public @Valid Todo save(@Valid Todo todo) {
+		todo.setCreatedDate(LocalDateTime.now());
 		todoRepository.save(todo);
 		return todo;
 	}
@@ -49,6 +51,7 @@ public class TodoService {
 				.orElseThrow(() -> new ResourceNotFoundException("Todo not found for this id :: " + todoId));
 		todo.setLabel(todoDetails.getLabel());
 		todo.setDone(todoDetails.isDone());
+		todo.setLastModifiedDate(LocalDateTime.now());
 		return todoRepository.save(todo);
 	}
 

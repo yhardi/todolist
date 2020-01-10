@@ -11,7 +11,9 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "todos")
-public class Todo {
+public class Todo extends Auditor {
+
+	private static final long serialVersionUID = 759833625132946781L;
 
 	public Todo() {
 	}
@@ -61,5 +63,4 @@ public class Todo {
 	public String toString() {
 		return "Todo [id=" + id + ", label=" + label + ", done=" + done + "]";
 	}
-
 }

@@ -13,7 +13,7 @@
   </div>
 
   <ul class="todo-list">
-    <li *ngFor="let todo of todoList">
+    <li *ngFor="let todo of todoList | sortByCreatedDate">
       <div class="sticker">
         <label class="check-container">
           <input type="checkbox" [(ngModel)]="todo.done" (change)="markAsDone(todo)">
