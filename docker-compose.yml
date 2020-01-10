@@ -15,7 +15,7 @@ services:
             backend:
             frontend:
     api-service:
-        image: todolist-api-image
+        container_name: todolist-api-image
         build:
             context: ./todolist-api
             dockerfile: Dockerfile
