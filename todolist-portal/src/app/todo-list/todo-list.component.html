@@ -8,7 +8,6 @@
   </div>
 
   <ul class="todo-list">
-    <!-- TODO: make this as component -->
     <li *ngFor="let todo of todoList">
       <div class="sticker">
         <label class="check-container">
@@ -17,7 +16,6 @@
         </label>
         <a routerLink="/detail/{{todo.id}}" [style.text-decoration]="todo.done ? 'line-through': ''">{{todo.label}}</a>
         <span class="delete-button" (click)="delete(todo)">x</span>
-
       </div>
     </li>
   </ul>

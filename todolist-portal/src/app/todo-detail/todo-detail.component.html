@@ -1,18 +1,22 @@
 <div>
   <h2>Todo Details</h2>
 
-  <div class="sticker">
+  <form [formGroup]="todoForm" (submit)="save()" class="sticker">
     <label class="check-container" fxFlex="10">
-      <input type="checkbox" [(ngModel)]="todoDetails.done">
+      <input type="checkbox" formControlName="done">
       <span class="check-task"></span>
     </label>
-    <input type="text" fxFlex [(ngModel)]="todoDetails.label" placeholder="Label..">
-<!--    <input type="text" [(ngModel)]="todoDetails.label">-->
-  </div>
+    <input type="text" fxFlex="90" formControlName="label" placeholder="Label.." maxlength="80" required>
+
+    <div
+      *ngIf="todoForm.controls['label'].invalid && (todoForm.controls['label'].dirty || todoForm.controls['label'].touched)" class="errors">
+      <div *ngIf="todoForm.controls['label'].errors.required">Required.</div>
+    </div>
+  </form>
 
   <div>
     <button class="action-button" (click)="goBack()">Go back</button>
     <button class="action-button" (click)="delete()">Delete</button>
-    <button class="action-button" (click)="save()">Save</button>
+    <button class="action-button" (click)="save()" [disabled]="!todoForm.valid">Save</button>
   </div>
 </div>
