@@ -13,10 +13,18 @@ import javax.validation.constraints.Size;
 @Table(name = "todos")
 public class Todo {
 
+	public Todo() {
+	}
+
+	public Todo(@NotBlank @Size(max = 80) String label, boolean done) {
+		this.label = label;
+		this.done = done;
+	}
+
 	private long id;
 
 	@NotBlank
-	@Size(max = 50)
+	@Size(max = 80)
 	private String label;
 
 	private boolean done;
