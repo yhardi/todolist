@@ -30,7 +30,7 @@ export class TodoListComponent implements OnInit {
 
   delete(todoToDelete: Todo) {
     this.todoService.deleteById(todoToDelete.id).subscribe(() => {
-      for (let i = 0; i++; i < this.todoList.length) {
+      for (let i = 0; i < this.todoList.length; i++) {
         if (todoToDelete.id === this.todoList[i].id) {
           this.todoList.splice(i, 1);
           break;
