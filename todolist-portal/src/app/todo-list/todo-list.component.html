@@ -15,12 +15,12 @@
   <ul class="todo-list">
     <li *ngFor="let todo of todoList | sortByCreatedDate">
       <div class="sticker">
-        <label class="check-container">
+        <label class="check-container" fxFlex>
           <input type="checkbox" [(ngModel)]="todo.done" (change)="markAsDone(todo)">
           <span class="check-task"></span>
         </label>
-        <a routerLink="/detail/{{todo.id}}" [style.text-decoration]="todo.done ? 'line-through': ''">{{todo.label}}</a>
-        <span class="delete-button" (click)="delete(todo)">x</span>
+        <a class="todo-label" fxFlex="90" routerLink="/detail/{{todo.id}}" [style.text-decoration]="todo.done ? 'line-through': ''">{{todo.label}}</a>
+        <span class="delete-button" fxFlex="5" (click)="delete(todo)">x</span>
       </div>
     </li>
   </ul>

@@ -98,10 +98,6 @@ input[type=text] {
       }
     }
 
-    :hover input ~ .check-task {
-      background-color: #ccc;
-    }
-
     input:checked ~ .check-task {
       background-color: #e6b929;
     }
@@ -110,6 +106,12 @@ input[type=text] {
       display: block;
     }
 
+  }
+
+  .todo-label {
+    text-decoration: none;
+    color: #5f7c8a;
+    text-align: left;
   }
 }
 
